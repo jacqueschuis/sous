@@ -3,13 +3,22 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import LandingPage from "./pages/Landing";
-import Register from "./pages/Register";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/register",
-      element: <Register />,
+      element: <Layout content="register" />,
+    },
+    {
+      path: "/login",
+      element: <Layout content="login" />,
+    },
+    {
+      path: "/home",
+      element: <Home />,
     },
     {
       path: "*",
